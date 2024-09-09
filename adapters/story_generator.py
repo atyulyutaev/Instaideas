@@ -177,7 +177,7 @@ class OpenAIStoryGenerator(StoryGenerator):
             {"role": "user", "content": await story.get_prompt()}
         ]
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages=messages
         )
         gpt_text = response.choices[0].message.content
@@ -193,7 +193,7 @@ class OpenAIStoryGenerator(StoryGenerator):
             {"role": "user", "content": await story.get_prompt()}
         ]
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages=messages
         )
         gpt_text = response.choices[0].message.content
@@ -247,7 +247,7 @@ class OpenAIStoryGenerator(StoryGenerator):
             }
         ]
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages=messages
         )
         title = response.choices[0].message.content
@@ -262,7 +262,7 @@ class OpenAIStoryGenerator(StoryGenerator):
             }
         ]
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages=messages
         )
         title = response.choices[0].message.content
